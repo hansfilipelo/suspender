@@ -7,7 +7,7 @@
 #  Created by hansfilipelo & tobyndax, 2014-08-25.
 #
 
-import sys, getopt
+import sys, getopt, os
 
 if len(sys.argv) != 3:
     print ""
