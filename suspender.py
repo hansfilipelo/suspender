@@ -25,7 +25,7 @@ def threader(pool,vmList):
 
 def suspender(id,vmName):
     print("Suspending machine " + vmName + " " + strftime("%Y-%m-%d %H:%M", gmtime()))
-    os.system("ssh root@" + hostname + " vim-cmd vmsvc/power.suspend " + id " | grep -v 'Suspending VM:'")
+    os.system("ssh root@" + hostname + " vim-cmd vmsvc/power.suspend " + id + " | grep -v 'Suspending VM:'")
     print("Finished suspending machine " + vmName + " " + strftime("%Y-%m-%d %H:%M", gmtime()))
 
 # ----------------
