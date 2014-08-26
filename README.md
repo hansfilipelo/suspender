@@ -41,3 +41,5 @@ Clone project, cd to folder:
 Run:
 
 	./suspender esxiHostname nrOfSimultaneousSuspends
+
+
