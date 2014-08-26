@@ -13,6 +13,7 @@ from time import gmtime, strftime
 # ----------------
 # Helper functions
 
+# Splits work into a given number of threads at any time
 def threader(pool,vmList):
     file = open(vmList)
 
@@ -23,13 +24,17 @@ def threader(pool,vmList):
         vmName = data[1]
         pool.apply_async(suspender, args=(id,vmName))
 
+# Suspends a virtual machine
 def suspender(id,vmName):
     print("Suspending machine " + vmName + " " + strftime("%Y-%m-%d %H:%M", gmtime()))
+    
     os.system("ssh root@" + hostname + " vim-cmd vmsvc/power.suspend " + id + " | grep -v 'Suspending VM:'")
+    
     print("Finished suspending machine " + vmName + " " + strftime("%Y-%m-%d %H:%M", gmtime()))
 
 # ----------------
 
+# Check if user needs help
 if len(sys.argv) != 3:
     print ""
     print "Multi-threaded suspender for VMware ESXi virtual machines. Suspends all machines on a given host. "
@@ -41,6 +46,7 @@ if len(sys.argv) != 3:
     print ""
     sys.exit
 
+# Else run program
 else:
     hostname = sys.argv[1]
     nrOfSimoultaniousSuspends = int(sys.argv[2])
