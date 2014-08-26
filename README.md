@@ -42,4 +42,6 @@ Run:
 
 	./suspender esxiHostname nrOfSimultaneousSuspends
 
+To wake all machines: 
+    ./wakeAllOnHost.sh esxiHostname
 
