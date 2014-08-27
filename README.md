@@ -23,7 +23,7 @@ LICENSE
 
 REQUIREMENTS
 =================================
-Should run on any GNU environment that can run Python and SSH to a remote host. Tested on Debian, Ubuntu GNU/Linux and Mac OS X with ESXi 5.1 but should work with ESXi 2.5 until the most recent ESXi. 
+Should run on any GNU environment that can run Python and SSH to a remote host. Tested on Debian, Ubuntu GNU/Linux and Mac OS X with ESXi 5.1 - but should work with ESXi version 2.5 up until the most recent version of ESXi. 
 
 It's strongly recommended that key login is configured in order to use these scripts http://kb.vmware.com/selfservice/microsites/search.do?language=en_US&cmd=displayKC&externalId=1002866
 
