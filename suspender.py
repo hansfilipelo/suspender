@@ -44,7 +44,7 @@ if len(sys.argv) != 3:
     print "Usage: "
     print "    python suspender.py esxiHostname nrOfSimoultaniousSuspends"
     print ""
-    sys.exit
+    sys.exit(1)
 
 # Else run program
 else:
